@@ -1,12 +1,17 @@
- async function buscar(){
+const inputendereço = document.getElementById("endereço")
 
-        const resposta = await fetch(`https://viacep.com.br/ws/${55014658}/json/`)
+const r = document.getElementById("bairro")
 
-        let endereco = await resposta.json()
+                                    
 
-        console.log(endereco)
-}
+async function buscar() {
 
-function enviar () {
-        alert("Envie a mensagem")
+    alert("Minha buscar funcional! Oba!")
+    const response = await fetch (`https://viacep.com.br/ws/${55018370}/json/`)
+    let endereço = await response.json()
+
+    console.log(endereço) 
+
+    bairro.value = endereço.bairro
+
 }
